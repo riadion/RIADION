@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>شجرة العائلة</title>
+    <style>
+        /* اتجاه النص والعناصر اليميني (RTL) */
+        html, body {
+            direction: rtl;
+            text-align: right;
+        }
+
+        /* تنسيق العائلة باستخدام العناصر HTML و CSS فقط */
+        .family-tree {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .person {
+            border: 1px solid #000;
+            margin: 10px;
+            padding: 10px;
+            position: relative;
+        }
+
+        .person .name {
+            font-weight: bold;
+        }
+
+        .person .spouse::before {
+            content: "&";
+        }
+
+        /* الأطفال مخفيين افتراضيًا */
+        .children {
+            display: none;
+        }
+
+        /* تمتد الأطفال عندما يتم تحديد الصندوق (checkbox) */
+        input[type="checkbox"]:checked ~ .children {
+            display: block;
+        }
+
+        /* تمثيل علامة التبديل */
+        label.toggle-button {
+            cursor: pointer;
+            color: blue;
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <ul class="family-tree">
+        <li class="person">
+            <input type="checkbox" id="grandfather">
+            <label class="toggle-button" for="grandfather">+</label>
+            <div class="name">جد الأب</div>
+            <div class="spouse">جدة الأب</div>
+            <ul class="children">
+                <li class="person">
+                    <input type="checkbox" id="father">
+                    <label class="toggle-button" for="father">+</label>
+                    <div class="name">الأب</div>
+                    <div class="spouse">الأم</div>
+                    <ul class="children">
+                        <li class="person">
+                            <div class="name">الطفل 1</div>
+                        </li>
+                        <li class="person">
+                            <div class="name">الطفل 2</div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>

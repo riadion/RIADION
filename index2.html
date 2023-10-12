@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>شجرة العائلة</title>
+    <style>
+        /* اتجاه النص والعناصر اليميني (RTL) */
+        html, body {
+            direction: rtl;
+            text-align: right;
+        }
+
+        /* تنسيق العائلة باستخدام العناصر HTML و CSS فقط */
+        .family-tree {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .person {
+            border: 1px solid #000;
+            margin: 10px;
+            padding: 10px;
+            position: relative;
+        }
+
+        .person .name {
+            font-weight: bold;
+        }
+
+        .person .spouse::before {
+            content: "&";
+        }
+
+        /* الأطفال مخفيين افتراضيًا */
+        .children {
+            display: none;
+        }
+
+        /* تمتد الأطفال عند النقر على الزر */
+        .expand-button:focus + .children {
+            display: block;
+        }
+
+        /* تمثيل علامة الزر */
+        .expand-button {
+            cursor: pointer;
+            color: blue;
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 5px;
+            border: none;
+            background: none;
+        }
+    </style>
+</head>
+<body>
+    <ul class="family-tree">
+        <li class="person">
+            <button class="expand-button" aria-label="Expand">click</button>
+            <div class="name">جد الأب</div>
+            <div class="spouse">جدة الأب</div>
+            <ul class="children">
+                <li class="person">
+                    <button class="expand-button" aria-label="Expand">+</button>
+                    <div class="name">الأب</div>
+                    <div class="spouse">الأم</div>
+                    <ul class="children">
+                        <li class="person">
+                            <div class="name">الطفل 1</div>
+                        </li>
+                        <li class="person">
+                            <div class="name">الطفل 2</div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="person">
+                    <button class="expand-button" aria-label="Expand">+</button>
+                    <div class="name">الأب</div>
+                    <div class="spouse">الأم</div>
+                    <ul class="children">
+                        <li class="person">
+                            <div class="name">الطفل 1</div>
+                        </li>
+                        <li class="person">
+                            <div class="name">الطفل 2</div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>
