@@ -7,6 +7,17 @@
             font-size: 25px;
         }
 
+        /* العنوان */
+        .type{
+            font-size: 40px;
+            text-align: center;
+        }
+
+        .type2{
+            font-size: 30px;
+            text-align: center;
+        }
+
         /* تنسيق العائلة باستخدام قائمة غير مرتبة */
         .family-tree {
             list-style-type: none;
