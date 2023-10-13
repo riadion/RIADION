@@ -5,6 +5,7 @@
             text-align: right;
             font-family: 'Cairo', sans-serif;
             font-size: 25px;
+            color: #346339;
         }
 
         /* العنوان */
@@ -25,7 +26,7 @@
         }
 
         .person {
-            border: 1px solid #000;
+            border: 2px solid #EAD16C;
             margin: 10px;
             padding: 10px;
             position: relative;
@@ -73,4 +74,7 @@
         img{
             width: 100%;
             height: 100%;
+        }
+        th{
+            text-align: center;
         }
