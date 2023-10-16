@@ -7,7 +7,16 @@
             font-size: 25px;
             color: #346339;
         }
-
+        
+        /* logo */
+        .logo{
+            text-align: left;
+            
+        }
+        
+        .logo img{
+            width: 20%;
+        }
         /* العنوان */
         .type{
             font-size: 40px;
