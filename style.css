@@ -86,10 +86,30 @@
             height: 100%;
         }
 
-        th{
+        th,tr{
             text-align: center;
+        }
+
+        th{
+            background-color: #06fd0e3c;
         }
 
         .redtitle{
             color: #fd0606;
+        }
+
+        .r{
+            background-color: #fd0606;
+        }
+
+        .o{
+            background-color: #fd9606;
+        }
+
+        .y{
+            background-color: #e4fd06;
+        }
+
+        .g{
+            background-color: #06fd0e;
         }
