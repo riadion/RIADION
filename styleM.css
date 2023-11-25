@@ -1,0 +1,191 @@
+/* اتجاه النص والعناصر اليميني (RTL) */
+html, body {
+    direction: rtl;
+    text-align: right;
+    font-family: 'Cairo', sans-serif;
+    font-size: 27px;
+    color: #346339;
+    background-color: #65625425;
+    text-shadow: 
+        1px 2px 1px #346339b8,
+        1px 3px 1px #ffffff,
+        3px 1px 4px #22282289;
+}
+
+/* logo */
+.logo{
+    text-align: left;
+    
+}
+
+.logo img{
+    width: 20%;
+}
+
+/* العنوان */
+.type{
+    font-size: 40px;
+    text-align: center;
+    border: 2px solid #EAD16C;
+    /* border-radius: 10px; */
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 0px;
+    margin: 5px;
+    padding: 5px;
+    position: relative;
+    box-shadow:0px 2px 2px 2px #5a7e5d;
+}
+
+.type2{
+    font-size: 30px;
+    text-align: center;
+    border: 2px solid #EAD16C;
+    width: vw;
+    border-radius: 30px;
+    margin: 5px;
+    padding: 5px;
+    position: relative;
+    box-shadow:0px 2px 2px 2px #5a7e5d;
+    background-color: #ead16c8a;
+}
+
+/* تنسيق العائلة باستخدام قائمة غير مرتبة */
+.family-tree {
+    list-style-type:none;
+    padding-left: 0;
+}
+
+.person {
+    border: 2px solid #EAD16C;
+    /* border-radius: 10px; */
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 0px;
+    margin: 5px;
+    padding: 5px;
+    position: relative;
+    box-shadow:0px 2px 2px 2px #5a7e5d;
+    border-right:10px solid #5a7e5d9f;
+}
+
+/* .person .name {
+    font-weight: bold;
+} */
+
+/*head data*/
+.headdata {
+    font-weight: bold;
+    text-align: center;
+    width:vw;
+    border: 2px solid #EAD16C;
+    border-radius: 30px;
+    margin: 5px;
+    padding: 5px;
+    position: relative;
+    box-shadow:0px 2px 2px 2px #5a7e5d;
+    background-color: #EAD16C;
+}
+
+.person .spouse::before {
+    content: " ";
+}
+
+/* الأطفال مخفيين افتراضيًا */
+.children {
+    display: none;
+}
+
+/* تمدد الاطفال عندما يتم النقر علي الزر */
+:target .children {
+    display: block;
+}
+
+/* تمتد الأطفال عندما يتم تحديد الصندوق (checkbox) */
+input[type="checkbox"]:checked ~ .children {
+    display: block;
+    background-color: #a1c0a37c;
+    box-shadow: 3px 3px 2px 1px #81647e;
+    border-radius: 2px;
+}
+
+input[type="checkbox"]:checked label{
+    background-color: #a1c0a35e;
+}
+
+input[type="checkbox"]{
+    display: none;
+}
+
+/* تمثيل علامة التبديل */
+label {
+    cursor: pointer;
+    color: blue;
+    position:relative;
+    display:flex;
+    top: 0;
+    right: 0;
+    padding: 5px;
+    box-shadow: 3px 3px 2px 1px #81647e;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+th,tr{
+    text-align: center;
+}
+
+th{
+    background-color: #06fd0e3c;
+}
+
+.redtitle{
+    color: #fd0606;
+}
+
+.r{
+    background-color: #fd0606;
+}
+
+.o{
+    background-color: #fd9606;
+}
+
+.y{
+    background-color: #e4fd06;
+}
+
+.g{
+    background-color: #06fd0e;
+}
+
+label{
+    background-color: #a8d4acc8;
+    width:99%;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 0px;
+    border-width: 1px;
+    box-shadow: 3px 3px 2px 1px #5a7e5d;
+}
+
+label:hover{
+    background-color: #a1c0a3c8;
+    box-shadow: 3px 3px 2px 1px #6f526c;
+}
+
+/* 
+input[type="checkbox"]:checked{
+    background-color: #a1c0a3c8;
+    width: 99%;
+    align-self: flex-end;
+    border-radius: 10px;
+    border-width: 1px;
+    box-shadow: 3px 3px 3px 3px #526f55;
+}
