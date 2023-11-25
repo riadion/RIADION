@@ -14,12 +14,16 @@ html, body {
 
 /* logo */
 .logo{
-    text-align: left;
-    
+    display: flex;
+    justify-content: space-around;
 }
 
 .logo img{
     width: 20%;
+}
+
+img.dr {
+    width: 130px;
 }
 
 /* العنوان */
