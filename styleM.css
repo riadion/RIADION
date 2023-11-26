@@ -26,6 +26,15 @@ img.dr {
     width: 130px;
 }
 
+p,dd{
+    box-shadow:1px 1px 1px 1px #5a7e5dc2;
+    margin: 3px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 0px;
+
+}
 /* العنوان */
 .type{
     font-size: 40px;
@@ -121,7 +130,8 @@ input[type="checkbox"]:checked label{
 }
 
 input[type="checkbox"]{
-    display: none;
+    display:none;
+    width: 100%;
 }
 
 /* تمثيل علامة التبديل */
@@ -139,6 +149,14 @@ label {
 label:active{
     transform: rotatex(360deg);
 }
+/* الشكل المتغير */
+/* .material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+} */
 
 img{
     width: 100%;
@@ -150,7 +168,7 @@ th,tr{
 }
 
 th{
-    background-color: #06fd0e3c;
+    background-color: #6f526c6e;
 }
 
 .redtitle{
@@ -189,6 +207,11 @@ label:hover{
     box-shadow: 3px 3px 2px 1px #6f526c;
 }
 
+table,tr,td,th{
+    border: solid #6f526c 1px;
+    column-gap: 0px;
+    box-shadow: 3px 3px 2px 1px #6f526cba;
+}
 /* 
 input[type="checkbox"]:checked{
     background-color: #a1c0a3c8;
