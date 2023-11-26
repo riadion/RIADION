@@ -113,6 +113,7 @@ input[type="checkbox"]:checked ~ .children {
     background-color: #a1c0a37c;
     box-shadow: 3px 3px 2px 1px #81647e;
     border-radius: 2px;
+    
 }
 
 input[type="checkbox"]:checked label{
@@ -133,6 +134,10 @@ label {
     right: 0;
     padding: 5px;
     box-shadow: 3px 3px 2px 1px #81647e;
+    transition: transform 0.9s ease;
+}
+label:active{
+    transform: rotatex(360deg);
 }
 
 img{
