@@ -135,7 +135,7 @@ input[type="checkbox"]{
 }
 
 /* تمثيل علامة التبديل */
-label {
+label ,details{
     cursor: pointer;
     color: blue;
     position:relative;
@@ -171,12 +171,8 @@ th{
     background-color: #6f526c6e;
 }
 
-.redtitle{
+.redtitle,.r{
     color: #fd0606;
-}
-
-.r{
-    background-color: #fd0606;
 }
 
 .o{
