@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 2rem;
+    font-size: 1.2rem;
+}
+
+body {
+    background-color: #e4e0dc;
+    text-shadow: 
+    .1rem .15rem .1rem #d1dbfc,
+    .1rem .2rem .1rem #ffffff,
+    .3rem .1rem .45rem #be4eff;
+    display: flex;
+    justify-content: flex-end; /* Center the family tree on the right */
+}
+
+/* ... (rest of the styles) */
+
+.family-tree {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Align the family tree to the right */
+    margin-right: 50%; /* Adjust margin to center it on the right */
+}
+
+/* ... (rest of the styles) */
+
+.family-body {
+    white-space: nowrap;
+    overflow: scroll;
+    min-height: auto;
+    min-width: auto;
+}
+
+summary::after,
+details {
+    content: var(--var1);
+    color: #E32B53;
+    padding-top: .3rem;
+}
+
+input[type=checkbox] {
+    display: none;
+}
+
+/* الأطفال مخفيين افتراضيًا */
+.children {
+    display: none;
+}
+
+/* تمتد الأطفال عندما يتم تحديد الصندوق (checkbox) */
+input[type="checkbox"]:checked ~ .children {
+    display: flex;
+}
+
+ul, li {
+    position: relative;
+}
+
+li {
+    list-style: none;
+    float: right; /* Change from "float: right;" */
+    text-align: center;
+    padding: 1rem .5rem .25rem .5rem;
+}
+
+/*horizontal list line*/
+.family-tree li::before,
+.family-tree li::after {
+    content: '';
+    position: absolute;
+    top: 50%; /* Center the horizontal lines */
+    left: 50%;
+    border-top: .03rem solid #9E9E9E;
+    width: 50%;
+    height: 50%; /* Half the height for vertical lines */
+}
+
+/*vertical list line*/
+.family-tree li::after {
+    left: 50%;
+    right: auto;
+    border-right: .03rem solid #9E9E9E;
+}
+
+/*lines for child only*/
+.family-tree li:only-child::after,
+.family-tree li:only-child::before {
+    display: none;
+}
+
+.family-tree li:only-child {
+    padding-top: 0;
+}
+
+/*lines adjust horizontal*/
+.family-tree li:first-child::before,
+.family-tree li:last-child::after {
+    border: 0 none;
+}
+
+/*last child indicator vertical line*/
+.family-tree li:last-child::before {
+    border-right: .03rem solid #949494; /* Change from "border-left" */
+    border-radius: 0 0 0 .04rem;
+}
+
+.family-tree li:first-child::before {
+    border-radius: 0 0 0 .04rem;
+}
+
+.family-tree ul ul::before {
+    content: '';
+    position: absolute;
+    top: -0.4rem;
+    right: 50%;
+    border-right: .03rem solid #949494;
+    width: 0;
+    height: 0.4rem;
+}
+
+/*line selection on hover*/
+.family-tree li label:hover~ul li::after,
+.family-tree li label:hover~ul li::before,
+.family-tree li label:hover~ul::before,
+.family-tree li label:hover~ul ul::before {
+    border-color: #E32B53;
+}
+
+/*font and color text span*/
+.toggle-button {
+    text-decoration: none;
+    color: #0040ff;
+    display: inline-block;
+    border-radius: 0.6rem;
+    background-color: #d1dbfc;
+    padding: 0.3rem;
+    margin: .3rem;
+    border: .03rem solid #be4eff;
+}
+
+.toggle-button:hover {
+    background-color: #eff2ff;
+}
+
+li .end {
+    border-style: .3rem solid #9e9e9e;
+    border-radius: .6rem;
+    padding: .5rem;
+    background-color: #e9d3d3;
+    border: .03rem solid #be4eff;
+}
+
+.sap {
+    box-shadow: 0 -.25rem 0 0 #ff2f2880;
+}
+
+table {
+    border-collapse: collapse;
+    border: .1rem solid #bbbbbb;
+    font-size: .5rem;
+    color: #000;
+}
+
+table th,
+#th {
+    text-align: center;
+    color: #ffffff;
+    background-color: #3a6070;
+    border: .1rem solid #bbbbbb;
+}
+
+table tr:nth-child(odd) td {
+    background-color: #e7edf0;
+    text-align: center;
+    border: .1rem solid #bbbbbb;
+}
+
+table tr:nth-child(even) td {
+    background-color: #f5e7e7d2;
+    text-align: center;
+    border: .1rem solid #bbbbbb;
+}
+
+table table tr:nth-child(odd) td {
+    background-color: #c2ebf0;
+    text-align: center;
+    border: .1rem solid #bbbbbb;
+}
+
+table table tr:nth-child(even) td {
+    background-color: #e4ecc5;
+    text-align: center;
+    border: .1rem solid #bbbbbb;
+}
+
+th,
+tr,
+td {
+    padding: .3rem;
+}
+
+#Nred {
+    color: red;
+}
+
+p {
+    box-shadow: .1rem .1rem .1rem .1rem #5a7e5dc2;
+    margin: .2rem;
+    padding: .3rem;
+    color: #3a6070;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: .4rem;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 0px;
+}
+
+.faz {
+    box-shadow: .1rem .1rem .1rem .1rem #5a7e5dc2;
+    border-radius: .3rem;
+    padding: .3rem;
+}
+
+.family-tree .sa {
+    background-color: #caf8c9;
+}
+
+.family-tree .sa:hover {
+    background-color: #ecfaec;
+}
